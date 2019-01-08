@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  class="card-background-page" >
+    <ion-card *ngFor="let item of items | async" (tap)="goFoods(item)">
+        <img [src]="item.img"/>
+        <div class="card-title">{{ item.nome }}</div>
+        <div class="card-subtitle">41 Listings</div>
+</ion-card>
+    
+         
+
+</ion-content>

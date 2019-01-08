@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>food</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+        <ion-item *ngIf="produto">
+          <ion-icon name="basket" item-left large ></ion-icon>
+          <h2>{{produto.nome}}</h2>
+          <p>descricao</p>
+        </ion-item>
+        <ion-grid *ngIf="produto != null">
+            <ion-row >
+                <ion-col col-6>
+                    <div id="image">
+                      <img [src]= "produto.img">
+                    </div>
+                </ion-col>
+                <ion-col col-6>
+                    <ion-item>
+                      <h1>R$ {{produto.preco}}</h1>
+                      <p>12 x 1 R$ 1</p>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-item>
+            <ion-icon name="card" item-start large></ion-icon>
+            <h2>PayPal</h2>
+            <p>12 x R$  sem juros</p>
+           
+        </ion-item>
+      
+        <ion-item>
+          <button ion-button full color="sucess" (click)="pagar()">comprar</button>
+        </ion-item>
+        
+        
+        <strong>Maps</strong>
+        <div id="output"></div>
+        <div id="map"></div>
+
+ 
+
+
+</ion-content>
+
+

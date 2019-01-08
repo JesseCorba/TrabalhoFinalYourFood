@@ -1,0 +1,23 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>foods</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+      <ion-item *ngFor="let item of produto">
+        <ion-thumbnail item-start>
+          <img [src]="item.img">
+        </ion-thumbnail>
+        <h2>{{item.nome}}</h2>
+        <p>{{item.preco}}</p>
+        <button ion-button color="sucess" (click)="goFood(item)" item-end>Ver</button>
+      </ion-item>
+    </ion-list>
+</ion-content>
